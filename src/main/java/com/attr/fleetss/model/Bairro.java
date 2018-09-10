@@ -34,4 +34,12 @@ public class Bairro {
     public void setBairro(String bairro) {
         this.bairro = bairro;
     }
+
+    public List<AreaCobertura> getAreaCobertura() {
+        return areaCobertura;
+    }
+
+    public void setAreaCobertura(List<AreaCobertura> areaCobertura) {
+        this.areaCobertura = areaCobertura;
+    }
 }

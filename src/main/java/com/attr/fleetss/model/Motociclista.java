@@ -58,8 +58,7 @@ public class Motociclista implements Serializable {
 
     public Motociclista(){};
 
-    public Motociclista(String nome, String telefone, String CPF, String RG, String CNH, boolean status, Date dataNascimento, int sexo, TipoSanguineo tipoSanguineo, Veiculo veiculo) {
-        super();
+    public Motociclista(String nome, String telefone, String CPF, String RG, String CNH, boolean status, Date dataNascimento, int sexo, TipoSanguineo tipoSanguineo, Veiculo veiculo, List<AreaCobertura> areaCobertura, Date data_cadastro) {
         this.nome = nome;
         this.telefone = telefone;
         this.CPF = CPF;
@@ -70,6 +69,8 @@ public class Motociclista implements Serializable {
         this.sexo = sexo;
         this.tipoSanguineo = tipoSanguineo;
         this.veiculo = veiculo;
+        this.areaCobertura = areaCobertura;
+        this.data_cadastro = data_cadastro;
     }
 
     public static Long getSerialVersionUID() {
@@ -163,4 +164,17 @@ public class Motociclista implements Serializable {
     public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
     }
+
+    public List<AreaCobertura> getAreaCobertura() {
+        return areaCobertura;
+    }
+
+    public void setAreaCobertura(List<AreaCobertura> areaCobertura) {
+        this.areaCobertura = areaCobertura;
+    }
+
+    public Date getData_cadastro() {
+        return data_cadastro;
+    }
+
 }
