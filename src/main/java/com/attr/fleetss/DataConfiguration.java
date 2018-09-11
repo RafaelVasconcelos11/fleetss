@@ -16,7 +16,7 @@ public class DataConfiguration {
 	public DataSource dataSource(){
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost/cadastro");
+		dataSource.setUrl("jdbc:mysql://localhost/smartfleet");
 		dataSource.setUsername("root");
 		dataSource.setPassword("");
 		return dataSource;

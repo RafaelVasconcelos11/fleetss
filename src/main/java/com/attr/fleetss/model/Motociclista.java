@@ -1,5 +1,7 @@
 package com.attr.fleetss.model;
 
+import com.attr.fleetss.model.solicitacao.Solicitacao;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -40,7 +42,7 @@ public class Motociclista implements Serializable {
     @Column(name = "nm_sexo")
     private int sexo;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_tp_sanguineo")
     private TipoSanguineo tipoSanguineo;
 
@@ -51,6 +53,9 @@ public class Motociclista implements Serializable {
     @OneToMany(targetEntity = AreaCobertura.class, mappedBy = "motociclista")
     @Column(name = "id_area_cobertura")
     private List<AreaCobertura> areaCobertura;
+
+    @OneToMany(targetEntity = Solicitacao.class, mappedBy = "clienteSolicitante")
+    private List<Solicitacao> solicitacao;
 
     @Column(name = "dt_cadastro", insertable = false, updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
